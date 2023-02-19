@@ -15,14 +15,14 @@ builder.Services.Configure<ForwardedHeadersOptions>(option =>
     option.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
 });
 ```
-App Integration
+# App Integration
 
-# Blazor in code using C#
+Blazor in code using C#
 ```sh
 @inject IHttpContextAccessor httpContextAccessor
 IPAddress remoteIP = httpContextAccessor.HttpContext.Connection.RemoteIpAddress;
 ```
-# MVC in code using C#
+MVC in code using C#
 ```sh
 IPAddress remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 ```
